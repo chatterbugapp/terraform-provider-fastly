@@ -3910,6 +3910,8 @@ func buildCacheSetting(cacheMap interface{}) (*gofastly.CreateCacheSettingInput,
 		opts.Action = gofastly.CacheSettingActionPass
 	case "restart":
 		opts.Action = gofastly.CacheSettingActionRestart
+	case "deliver":
+		opts.Action = gofastly.CacheSettingActionDeliver
 	}
 
 	return &opts, nil
